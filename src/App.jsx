@@ -23,6 +23,7 @@ function reducer(state,action){
        <button>{state.count3}</button>
        <button onClick={() => dispatch({ type: "increment" })}>increment</button>
        <button onClick={() => dispatch({ type: "increment3" })}>increment_3</button>
+       <button onClick={() => dispatch({ type: "increment3" })}>increment_3</button>
      </div>
    )
  }
