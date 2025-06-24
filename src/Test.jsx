@@ -1,12 +1,19 @@
- import React from 'react';
+ import React, { createContext } from 'react'
+ 
 
-const Test = ({ name, loding }) => {
-  return (
-    <>
-      <h2>Hello, {name}</h2>
-      <p>Loading status: {loding ? "True" : "False"}</p>
-    </>
-  );
-};
+ export  const  Mycontext = createContext();
+ 
 
-export default Test;
+ export const Myprovider =({children})=>{
+
+  const data =[3,4,4,5,5,4,3,6,7,"jkbhbjhbech"]
+
+
+return(
+ < Mycontext.Provider value={data}>
+ {children}
+ </Mycontext.Provider>
+)
+
+
+ }
