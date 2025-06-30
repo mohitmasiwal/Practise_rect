@@ -1,12 +1,15 @@
- import React from 'react'
+ import React, { memo } from 'react'
  
- const Store = () => {
+ const Store = ({test}) => {
+   console.log("to check render");
+   
    return (
      <div>
-       
+       <h1>i am store </h1>
+         <button onClick={()=>test}>click</button>
      </div>
    )
  }
  
- export default Store
+ export default memo(Store)
  
