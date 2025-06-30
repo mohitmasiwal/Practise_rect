@@ -1,12 +1,13 @@
  import React from 'react'
  
- const Store = ({count}) => {
+ const Store = (Newcop ) => {
    
-   return (
-     <div>
-       <h1> i am child one {count}</h1>
-     </div>
-   )
+  return  function loder  (props){
+     if(props.lod){
+      return <h1>......loding data......</h1>
+     }
+     return <Newcop {...props}/>
+  } 
  }
  
  export default Store

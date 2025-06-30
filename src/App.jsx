@@ -1,6 +1,6 @@
  import React from 'react'
  
- const App = () => {
+ const 4 = () => {
    return (
      <div>
        
@@ -8,5 +8,5 @@
    )
  }
  
- export default App
+ export default 4
  

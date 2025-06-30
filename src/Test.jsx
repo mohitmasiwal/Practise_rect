@@ -1,10 +1,9 @@
  import React from 'react'
  
- const Test = ({count,setcount}) => {
+ const Test = () => {
    return (
      <div>
-       <h1>i am fromn child 2{count}</h1>
-       <button onClick={()=>setcount(pre=>pre+1)}>inc</button>
+       <h1>hghcgckgckg</h1>
      </div>
    )
  }
