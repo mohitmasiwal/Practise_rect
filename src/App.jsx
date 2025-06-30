@@ -1,5 +1,6 @@
  import React, {   useMemo, useState } from 'react'
 import Store from './Store';
+import { TestPortal } from './Test';
  
  const App = () => {
   const [count ,setcount]= useState(0);
@@ -11,15 +12,7 @@ import Store from './Store';
   }
 
 
-  let arr = new Array(4).fill(2)
-const Add = useMemo(()=>{
-   let i =0,n = arr.length,sum =0;
-  while( i<n){
-    sum += arr[i]
-    i++
-  }
- return
-},[])
+  
  
 
  
@@ -30,7 +23,8 @@ const Add = useMemo(()=>{
        <h1></h1>
        <button onClick={()=>inc()}>inc</button>
        <button onClick={()=>dec()}>inc</button>
-       <h1>{Add}</h1>
+       {count > 10 &&  <TestPortal/>}
+      
        <Store  />
      </div>
    )
