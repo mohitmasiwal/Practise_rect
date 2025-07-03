@@ -1,6 +1,14 @@
- export const Loggerfor = (store)=>(next)=>(action)=>{
-    console.log("dispatching action",action);
-    const result = next(action);
-    return result;
-     
-}
+ import React from 'react'
+ 
+ const Logger = ({isloding}) => {
+    console.log(isloding);
+    
+   return (
+     <div>
+       <h1>the hfgfuflv.i; </h1>
+     </div>
+   )
+ }
+ 
+ export default Logger
+ 
