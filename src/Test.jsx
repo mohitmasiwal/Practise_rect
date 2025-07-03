@@ -18,6 +18,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
         state.islogin =  action.payload
     }
   },
+  
   extraReducers:(builder)=>{
 builder
 .addCase(fetchUser.fulfilled,  (state,action)=>{
