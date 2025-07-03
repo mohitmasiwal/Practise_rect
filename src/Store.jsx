@@ -1,20 +1,10 @@
-import { Children, createContext, useState } from "react";
+import { configureStore } from "@reduxjs/toolkit";
 
- 
+ import TestReducer from "./Test"
 
-export const Mycontext = createContext();
-
-export const Myprovider=({children})=>{
-
-const [count ,setcount] = useState(55)
-
- function inc(){
-  setcount(pre=>pre+6)
- }
-
-  return (
-    <Mycontext.Provider value={[count,setcount,inc]}>
-      {children}
-    </Mycontext.Provider>
-  )
-}
+ const store = configureStore({
+  reducer:{ 
+    Test: TestReducer
+  }
+ })
+ export default store;
