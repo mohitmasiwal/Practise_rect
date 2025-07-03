@@ -1,15 +1,20 @@
- import React, { memo } from 'react'
+import { Children, createContext, useState } from "react";
+
  
- const Store = ({test}) => {
-   console.log("to check render");
-   
-   return (
-     <div>
-       <h1>i am store </h1>
-         <button onClick={()=>test}>click</button>
-     </div>
-   )
+
+export const Mycontext = createContext();
+
+export const Myprovider=({children})=>{
+
+const [count ,setcount] = useState(55)
+
+ function inc(){
+  setcount(pre=>pre+6)
  }
- 
- export default memo(Store)
- 
+
+  return (
+    <Mycontext.Provider value={[count,setcount,inc]}>
+      {children}
+    </Mycontext.Provider>
+  )
+}

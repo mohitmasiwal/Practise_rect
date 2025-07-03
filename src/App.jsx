@@ -1,31 +1,12 @@
- import React, {   useMemo, useState } from 'react'
-import Store from './Store';
-import { TestPortal } from './Test';
+ import React, { useContext } from 'react'
+import { Mycontext } from './Store'
  
  const App = () => {
-  const [count ,setcount]= useState(0);
-  function inc(){
-    setcount(pre=>pre+5)
-  }
-  function dec(){
-    setcount(pre=>pre-5)
-  }
-
-
-  
- 
-
- 
- 
+  const [count ,setcount,inc] = useContext(Mycontext)
    return (
      <div>
-       <h1>{count}</h1>
-       <h1></h1>
+       <h1> this id{count}</h1>
        <button onClick={()=>inc()}>inc</button>
-       <button onClick={()=>dec()}>inc</button>
-       {count > 10 &&  <TestPortal/>}
-      
-       <Store  />
      </div>
    )
  }
