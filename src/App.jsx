@@ -6,7 +6,9 @@
 
 
 function reducer (state,action){
-    
+    if(action.type === "inc"){
+      
+    }
 }
 
  const App = () => {
