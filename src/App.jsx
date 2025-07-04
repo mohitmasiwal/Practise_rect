@@ -1,18 +1,20 @@
-import { useDispatch, useSelector } from "react-redux"
-import { fetchUser, login } from "./Test"
-import { HOC } from "./HOC";
-import Logger from "./Logger";
+ import React, { useReducer } from 'react'
+  Is ={
+    count :0,
+    name :"rahul"
+  }
+
+
+function reducer (state,action){
+    
+}
 
  const App = () => {
- 
-   const Enh = HOC(Logger)
-  const dispatch = useDispatch()
+  const [state , disptch ] = useReducer(reducer , Is)
    return (
      <div>
-     
-       <button onClick={()=> dispatch(login(false))}>inc</button>
-       <button onClick={()=> dispatch(fetchUser())}>fetch</button>
-       <Enh  isloding = {false}/>
+       <button onClick={disptch({type:"inc"})}></button>
+       <button onClick={disptch({type:"dec"})}></button>
      </div>
    )
  }
