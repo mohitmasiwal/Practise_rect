@@ -1,12 +1,10 @@
-
- export const HOC =(Newcomponent)=>{
-
-    return function (props){
- if(props.isloding){
-    return <h1>....loding data.....</h1>
+ import React from 'react'
+ 
+ const usecustom = () => {
+   const [count ,setcount]= useState(0)
+   return  {count ,setcount}
+    
  }
- return <Newcomponent {...props}/>
-    }
-}
-
-
+ 
+ export default   usecustom
+ 

@@ -1,15 +1,15 @@
- import React from 'react'
+ import React, { memo } from 'react'
  
- const AAA = ({name,...message}) => {
-    console.log(name,message);
-    
+ const AAA = ({name}) => {
+  console.log("i will check rerender ");
+  
    return (
      <div>
-          <h1> to terst rest{name}  </h1>
+    
+       <h1> hellpo mate i </h1>
      </div>
    )
  }
  
- export default AAA
+ export default memo(AAA) 
  
-
